@@ -17,7 +17,7 @@ const SkillShareForm = ({ onAdd, setError, editId }) => {
 
   useEffect(() => {
     if (isEditing) {
-      axios.get(`http://localhost:8080/api/skillshares/${editId}`)
+      axios.get(`https://backend-app-oz8v.onrender.com/api/skillshares/${editId}`)
         .then(response => {
           setFormData(response.data);
         })
@@ -76,9 +76,9 @@ const SkillShareForm = ({ onAdd, setError, editId }) => {
 
     try {
       if (isEditing) {
-        await axios.put(`http://localhost:8080/api/skillshares/${editId}`, formData);
+        await axios.put(`https://backend-app-oz8v.onrender.com/api/skillshares/${editId}`, formData);
       } else {
-        await axios.post('http://localhost:8080/api/skillshares/addSkillShare', formData);
+        await axios.post('https://backend-app-oz8v.onrender.com/api/skillshares/addSkillShare', formData);
       }
       
       onAdd();
