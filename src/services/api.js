@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8080/api/skillshares';
+const API_BASE_URL = 'https://backend-app-oz8v.onrender.com/api/skillshares';
 
 export const skillShareAPI = {
   getAllSkillShares: () => axios.get(`${API_BASE_URL}/allSkillShares`),
