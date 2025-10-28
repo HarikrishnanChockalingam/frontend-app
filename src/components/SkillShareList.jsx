@@ -6,7 +6,7 @@ const SkillShareList = ({ skillShares, onChange }) => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this skill share?')) {
       try {
-        await axios.delete(`http://localhost:8080/api/skillshares/${id}`);
+        await axios.delete(`https://backend-app-oz8v.onrender.com/api/skillshares/${id}`);
         onChange();
       } catch (error) {
         console.error('Failed to delete skill share:', error);
