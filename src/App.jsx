@@ -17,7 +17,7 @@ function App() {
 
   const fetchSkillShares = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/api/skillshares/allSkillShares');
+      const response = await axios.get('https://backend-app-oz8v.onrender.com/api/skillshares/allSkillShares');
       setSkillShares(response.data);
     } catch (error) {
       console.error('Failed to fetch skill shares:', error);
