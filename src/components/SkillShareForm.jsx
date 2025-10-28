@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const SkillShareForm = ({ onAdd, setError, editId }) => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     skillName: '',
     category: '',
@@ -12,12 +13,6 @@ const SkillShareForm = ({ onAdd, setError, editId }) => {
     availability: ''
   });
   
-  let navigate;
-  try {
-    navigate = useNavigate();
-  } catch (error) {
-    navigate = () => {}; // Mock navigate for testing
-  }
   const isEditing = !!editId;
 
   useEffect(() => {
